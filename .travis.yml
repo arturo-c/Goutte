@@ -1,0 +1,10 @@
+language: php
+php:
+  - "5.4"
+  - "5.3"
+before_script:
+  - composer install
+  - mv phpunit.xml.dist phpunit.xml
+  - sudo apt-get install libmagic-dev
+script:
+  - phpunit --verbose
